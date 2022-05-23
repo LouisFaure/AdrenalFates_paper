@@ -9,5 +9,3 @@ declare -a plates
 plates=(`cat plates`)
 
 parallel -j 20 runVelo ::: "${plates[@]}"
-
-echo "done" | mail -s "Velo" louis.faure75@gmail.com

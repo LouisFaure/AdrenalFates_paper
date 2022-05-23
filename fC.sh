@@ -11,4 +11,3 @@ parallel -j 40 runFc ::: "${bams[@]}"
 
 python merge_fC.py
 rm *.txt && rm *.summary
-echo "done" | mail -s "Feature counts" louis.faure75@gmail.com

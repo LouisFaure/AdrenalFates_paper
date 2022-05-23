@@ -8,5 +8,3 @@ runSTAR() {
 export -f runSTAR
 readarray -d '' fastqs < <(find . -name "*.gz" -print0)
 parallel -j 20 runSTAR ::: "${fastqs[@]}"
-
-echo "done" | mail -s "STAR align" louis.faure75@gmail.com
